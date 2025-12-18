@@ -13,6 +13,10 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    text-decoration: none;
+}
+
 .row {
     width: 100%;
     max-width: 1280px;
@@ -144,6 +148,7 @@ nav {
     background: transparent;
     border: none;
     transition: all 300ms ease;
+    cursor: pointer;
 }
 
 .btn__menu--svg:hover {
@@ -1151,6 +1156,10 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media (max-width: 1024px) {
+    .section__para {
+        font-size: 16px;
+    }
+
     .nav__links {
         display: none;
     }
@@ -1163,10 +1172,13 @@ MOBILE RESPONSIVENESS ↓
         align-items: center;
     }
 
-    .header__description {
+    .header__description, .header__img--wrapper {
         width: 100%;
         max-width: 512px;
         margin: 0 auto;
+    }
+
+    .header__description {
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -1178,7 +1190,8 @@ MOBILE RESPONSIVENESS ↓
     }
 
     .feature {
-        width: 50%;
+        width: calc(50%);
+        margin: 0 auto;
     }
 
     .feature__row {
@@ -1235,6 +1248,10 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media(max-width: 768px) {
+    .section__para {
+        font-size: 14px;
+    }
+
     .features {
         justify-content: center;
     }
@@ -1313,6 +1330,50 @@ MOBILE RESPONSIVENESS ↓
 }
 
 @media(max-width: 640px) {
+    .header__email {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .header__email--input {
+        position: static;
+        padding: 16px 0;
+        padding-left: 32px;
+        line-height: 1.5;
+    }
+
+    .header__email--btn {
+        width: 100%;
+        padding: 16px 0;
+        margin: 16px 0;
+        margin-bottom: 0px;
+        line-height: 1.5;
+    }
+
+    .header__customers--title {
+        margin-top: 2.5em;
+        font-size: 0.9em;
+    }
+
+    .header__customers--img {
+        margin-bottom: 2.5em;
+    }
+
+    #features .section__title, #pricing .section__title {
+        font-size: 36px;
+    }
+
+    .feature__row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .feature__text {
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+
     .container {
         padding: 80px 0;
     }
