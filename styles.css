@@ -524,6 +524,9 @@ STEPS ↓
 VALUES ↓
 
 */
+.values__description .section__title {
+    line-height: 55px;
+}
 
 #values .row {
     display: flex;
@@ -621,6 +624,11 @@ PRICING ↓
     align-items: center;
 }
 
+#pricing .section__para {
+    max-width: 600px;
+    text-align: center;
+}
+
 .plans {
     display: flex;
     position: relative;
@@ -660,6 +668,12 @@ PRICING ↓
 #personal .plan__stripe, #personal .plan__button {
     color: #f7fafc;
     background: linear-gradient(115deg, rgb(56, 178, 172) 0%, rgb(129, 230, 217) 100%);
+}
+
+.plan__button:hover {
+    cursor: pointer;
+    transform: translate(1px, -1px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
 }
 
 #personal .plan__middle, #enterprise .plan__middle {
@@ -879,6 +893,11 @@ TESTIMONIALS ↓
     border: none;
 }
 
+.testimonial__button:hover {
+    background-color: rgba(203, 213, 224);
+    cursor: pointer;
+}
+
 .testimonial__button svg {
     width: 16px;
     height: 16px;
@@ -988,13 +1007,25 @@ START / CALL TO ACTION ↓
     transition: all 300ms ease;
     padding: 25px 40px;
     font-size: 18px;
+    cursor: pointer;
 }
+
+#get-started:hover {
+    background-color: rgba(229,62, 62);
+}
+
 
 #contact-us {
     border: 1px solid rgb(160, 174, 192);
     transition: all 300ms ease;
     padding: 25px 40px;
     font-size: 18px;
+    cursor: pointer;
+}
+
+#contact-us:hover {
+    background-color: rgba(247, 250, 252);
+    color: rgba(100, 21, 255);
 }
 
 .btn {
@@ -1002,11 +1033,16 @@ START / CALL TO ACTION ↓
     padding: 12px 32px;
     border: none;
     border-radius: 500px;
-    font-size: 14px;
     color: #fff;
     font-weight: bold;
     transition: all 300ms;
 }
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(80, 17, 204);
+}
+
 
 /* 
 
@@ -1042,16 +1078,23 @@ footer {
     font-weight: 700;
     color: #f7fafc;
     line-height: 1.5;
+    margin-bottom: 10px;
 }
 
 .footer__column--link {
     color: #f7fafc;
     font-size: 14px;
-    margin-top: 12px;
+    margin-top: 6px;
     line-height: 1.5;
     font-weight: 500;
     position: relative;
     cursor: pointer;
+    padding-bottom: 5px;
+    border-bottom: #6415ff solid 2px;
+}
+
+.footer__column--link:hover {
+    border-bottom: #f7fafc solid 2px;
 }
 
 .footer__divider {
@@ -1076,6 +1119,7 @@ footer {
     height: 32px;
     width: 32px;
 }
+
 
 .footer__logo--text {
     font-size: 20px;
@@ -1106,6 +1150,10 @@ footer {
     z-index: 2;
     cursor: pointer;
     transition: all 300ms ease;
+}
+
+.footer__social--link:hover {
+    background-color: rgba(203, 213, 224);
 }
 
 .footer__social--link svg {
@@ -1153,9 +1201,46 @@ MOBILE RESPONSIVENESS ↓
         padding-left: 2rem;
         padding-right: 2rem;
     }
+
+
+    .feature {
+        width: calc(100% / 3);
+    }
+
+    .feature__row {
+        padding: 32px 8px;
+        margin: 0 16px;
+    }
+
+    
 }
 
 @media (max-width: 1024px) {
+    .header__description h1 {
+        font-size: 30px;
+        margin-bottom: -15px;
+    }
+
+    #quality .section__title, #values .section__title, #steps .section__title, #testimonials .section__title {
+        font-size: 37px;
+    }
+
+    .section__title{
+        text-align: center;
+    }
+
+    .values__description .section__title {
+        line-height: 45px;
+    }
+
+    .header__img {
+        margin-top: 40px;
+    }
+
+    .feature__para {
+        max-width: 300px;
+    }
+
     .section__para {
         font-size: 16px;
     }
@@ -1242,6 +1327,10 @@ MOBILE RESPONSIVENESS ↓
         max-width: 512px;
     }
 
+    #get-started, #contact-us {
+        padding: 15px 25px;
+    }
+
     footer {
         padding: 80px 32px;
     }
@@ -1290,6 +1379,21 @@ MOBILE RESPONSIVENESS ↓
         align-items: center;
     }
 
+    #values .section__title {
+        margin-bottom: 30px;
+    }
+
+    .value__title {
+        justify-content: center;
+    }
+
+    
+    
+    #affordable {
+        width: 310px;
+        text-align: center;
+    }
+
     #steps .row,
     #testimonials .row {
         flex-direction: column;
@@ -1327,6 +1431,10 @@ MOBILE RESPONSIVENESS ↓
         flex-direction: column;
         align-items: center;
     }
+
+    .footer__copyright {
+        margin: 33px; 
+    }
 }
 
 @media(max-width: 640px) {
@@ -1350,6 +1458,10 @@ MOBILE RESPONSIVENESS ↓
         line-height: 1.5;
     }
 
+    .header__img {
+        margin-top: 20px;
+    }
+
     .header__customers--title {
         margin-top: 2.5em;
         font-size: 0.9em;
@@ -1363,6 +1475,7 @@ MOBILE RESPONSIVENESS ↓
         font-size: 36px;
     }
 
+    
     .feature__row {
         flex-direction: column;
         align-items: center;
@@ -1374,6 +1487,10 @@ MOBILE RESPONSIVENESS ↓
         margin-top: 16px;
     }
 
+    .feature__para {
+        margin-top: 5px;
+    }
+
     .container {
         padding: 80px 0;
     }
@@ -1383,5 +1500,63 @@ MOBILE RESPONSIVENESS ↓
     }
     main {
         margin-bottom: 80px;
+    }
+
+    #quality .section__title, #steps .section__title, #values .section__title, #testimonials .section__title {
+        font-size: 30px;
+    }
+
+    .plan__price {
+        font-size: 36px;
+    }
+
+    .testimonial__profile {
+        flex-direction: column;
+    }
+
+
+    .testimonial__bottom {
+        flex-direction: column;
+    }
+
+    .testimonial__buttons {
+        margin: 2px auto;
+    }
+
+    .testimonial__details {
+        margin: 20px auto;
+    }
+
+   .start__title {
+        font-size: 25px;
+   }
+
+   .start__buttons {
+        flex-direction: column;
+        gap: 20px;
+   }
+
+   #get-started, #contact-us {
+        width: 125px;
+        font-size: 15px;
+        margin: 0 auto;
+        padding: 10px 10px;
+   }
+
+   .footer__columns {
+        justify-content: center;
+    }
+
+    .footer__column {
+        width: auto;
+        padding: 0 16px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer__copyright {
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.5;
     }
 }
